@@ -24,7 +24,7 @@ public class UserController {
     public String showUserForm(Model model) {
         model.addAttribute("user",new User());
 
-        return "test";
+        return "index";
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
@@ -75,6 +75,12 @@ public class UserController {
     @RequestMapping(value = "/json",  method = RequestMethod.GET)
     @ResponseBody
     public String json(){
+        return "{\"username\":\"Przemek\"}";
+    }
+
+    @RequestMapping(value = "/json/lol",  method = RequestMethod.GET)
+    @ResponseBody
+    public String json2(){
         return "{\"username\":\"Przemek\"}";
     }
 
